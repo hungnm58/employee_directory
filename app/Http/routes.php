@@ -20,6 +20,10 @@ Route::controllers([
 	'password' => 'Auth\PasswordController',
 ]);
 
-Route::get('test',function(){
-	return view('admin.department.add');
+Route::group(['prefix' => 'admin'],function(){
+	Route::group(['prefix' => 'department'],function(){
+		Route::get('list',['as' => 'admin.department.list','uses' => 'DepartmentController@getList']);
+		Route::get('add',['as' => 'admin.department.getAdd','uses' => 'DepartmentController@getAdd']);
+		Route::post('add',['as' => 'admin.department.postAdd','uses' => 'DepartmentController@postAdd']);
+	});
 });

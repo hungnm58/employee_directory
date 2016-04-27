@@ -34,3 +34,20 @@ $(function() {
         element.addClass('active');
     }
 });
+
+/**
+ * Js for datatable
+ */
+$(function() {
+    $('#dataTables-example').DataTable({
+        responsive: true
+    });
+});
+
+/**
+ * Slide up alert
+ */
+$(function(){
+    $("div .alert").delay(3000).slideUp();
+});
+

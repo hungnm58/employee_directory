@@ -6,7 +6,7 @@ class Department extends Model {
 
 	protected $table = 'departments';
 	protected $fillable = ['name','office_phone','em_id'];
-	public $timestamps = false;
+	public $timestamps = true;
 
 	public function employee() {
 		return $this->hasMany('App\Employee');

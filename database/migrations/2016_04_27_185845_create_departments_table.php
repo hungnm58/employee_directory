@@ -17,7 +17,7 @@ class CreateDepartmentsTable extends Migration {
 			$table->increments('id');
 			$table->string('name')->unique();
 			$table->string('office_phone');
-			$table->integer('em_id')->unique();
+			$table->integer('em_id');
 			$table->timestamps();
 		});
 	}

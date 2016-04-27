@@ -116,7 +116,14 @@
         <div class="container-fluid">
             <div class="row panel panel-primary">
                 <div class="col-lg-12 panel-heading">
-                    <h3 class="panel-primary">Add Department</h3>
+                    <h3 class="panel-primary">@yield('action')</h3>
+                </div>
+                <div class="col-lg-12">
+                    @if(Session::has('flash_message'))
+                        <div class="alert alert-success">
+                            {!! Session::get('flash_message') !!}
+                        </div>
+                    @endif
                 </div>
                 <!-- /.col-lg-12 -->
                 @yield('content')
@@ -146,13 +153,6 @@
 <script src="{{ url('public/admin/bower_components/DataTables/media/js/jquery.dataTables.min.js') }}"></script>
 <script src="{{ url('public/admin/bower_components/datatables-plugins/integration/bootstrap/3/dataTables.bootstrap.min.js') }}"></script>
 <!-- Page-Level Demo Scripts - Tables - Use for reference -->
-<script>
-    $(document).ready(function() {
-        $('#dataTables-example').DataTable({
-            responsive: true
-        });
-    });
-</script>
 </body>
 
 </html>
