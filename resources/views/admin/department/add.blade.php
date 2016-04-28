@@ -1,4 +1,4 @@
-@extends('admin.master')
+    @extends('admin.master')
 @section('action','Add Department')
 @section('content')
     <div class="col-lg-7 panel-body" style="padding-bottom:120px">

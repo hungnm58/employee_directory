@@ -4,31 +4,38 @@
     <table class="table table-striped table-bordered table-hover" id="dataTables-example">
         <thead>
         <tr align="center">
-            <th>ID</th>
+            <th>STT</th>
             <th>Name</th>
-            <th>Category Parent</th>
-            <th>Status</th>
+            <th>Office Phone</th>
+            <th>Manager</th>
+            <th>View Employees</th>
             <th>Delete</th>
             <th>Edit</th>
         </tr>
         </thead>
         <tbody>
+        <?php $stt = 0; ?>
+        @foreach($data as $item )
+        <?php $stt++ ;?>
         <tr class="odd gradeX" align="center">
-            <td>1</td>
-            <td>Tin Tức</td>
-            <td>None</td>
-            <td>Hiện</td>
-            <td class="center"><i class="fa fa-trash-o  fa-fw"></i><a href="#"> Delete</a></td>
+            <td>{!! $stt !!}</td>
+            <td>{!! $item['name'] !!}</td>
+            <td>{!! $item['office_phone'] !!}</td>
+            <td>
+                @if($item['em_id'] == 0)
+                    {!! 'Empty' !!}
+                @else
+                    <?php
+                        $depart = DB::table('employees')->where('id',$item['em_id'])->first();
+                        echo $depart->name;
+                    ?>
+                @endif
+            </td>
+            <td class="center"><i class="fa fa-users fa-fw"></i><a href="#"> View</a></td>
+            <td class="center"><i class="fa fa-trash  fa-fw"></i><a href="#"> Delete</a></td>
             <td class="center"><i class="fa fa-pencil fa-fw"></i> <a href="#">Edit</a></td>
         </tr>
-        <tr class="even gradeC" align="center">
-            <td>2</td>
-            <td>Bóng Đá</td>
-            <td>Thể Thao</td>
-            <td>Ẩn</td>
-            <td class="center"><i class="fa fa-trash-o  fa-fw"></i><a href="#"> Delete</a></td>
-            <td class="center"><i class="fa fa-pencil fa-fw"></i> <a href="#">Edit</a></td>
-        </tr>
+        @endforeach
         </tbody>
     </table>
 @endsection

@@ -10,11 +10,13 @@ use App\Department;
 class DepartmentController extends Controller {
 
 	public function getList() {
-		return view('admin.department.list');
+		$data = Department::select('id','name','office_phone','em_id')->orderBy('name','ASC')->get()->toArray();
+		return view('admin.department.list',compact('data'));
 	}
 
 	public function getAdd() {
-		return view('admin.department.add');
+		$data = Department::select('id','name','office_phone','em_id')->get()->toArray();
+		return view('admin.department.add',compact('data'));
 	}
 
 	public function postAdd(DepartmentRequest $request) {
