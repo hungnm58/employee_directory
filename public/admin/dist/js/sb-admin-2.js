@@ -51,3 +51,13 @@ $(function(){
     $("div .alert").delay(3000).slideUp();
 });
 
+/**
+ * Flash message
+ */
+function confirmDelete(msg) {
+    if(window.confirm(msg)) {
+        return true;
+    }
+    return false;
+}
+

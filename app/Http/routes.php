@@ -25,5 +25,6 @@ Route::group(['prefix' => 'admin'],function(){
 		Route::get('list',['as' => 'admin.department.list','uses' => 'DepartmentController@getList']);
 		Route::get('add',['as' => 'admin.department.getAdd','uses' => 'DepartmentController@getAdd']);
 		Route::post('add',['as' => 'admin.department.postAdd','uses' => 'DepartmentController@postAdd']);
+		Route::get('delete/{id}',['as' => 'admin.department.getDelete','uses' => 'DepartmentController@getDelete']);
 	});
 });

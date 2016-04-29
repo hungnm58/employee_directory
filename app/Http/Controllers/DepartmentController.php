@@ -28,4 +28,10 @@ class DepartmentController extends Controller {
 		return redirect()->route('admin.department.list')->with(['flash_message' => 'Success! Complete add department']);
 	}
 
+	public function getDelete($id) {
+		$depart = Department::find($id);
+		$depart->delete();
+		return redirect()->route('admin.department.list')->with(['flash_message' => 'Success! Complete delete department']);
+	}
+
 }
