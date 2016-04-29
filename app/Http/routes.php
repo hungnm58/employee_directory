@@ -23,8 +23,11 @@ Route::controllers([
 Route::group(['prefix' => 'admin'],function(){
 	Route::group(['prefix' => 'department'],function(){
 		Route::get('list',['as' => 'admin.department.list','uses' => 'DepartmentController@getList']);
+		//Route::get('view',['as' => 'admin.department.view','uses' => 'DepartmentController@getView']);
 		Route::get('add',['as' => 'admin.department.getAdd','uses' => 'DepartmentController@getAdd']);
 		Route::post('add',['as' => 'admin.department.postAdd','uses' => 'DepartmentController@postAdd']);
 		Route::get('delete/{id}',['as' => 'admin.department.getDelete','uses' => 'DepartmentController@getDelete']);
+		Route::get('edit/{id}',['as' => 'admin.department.getEdit','uses' => 'DepartmentController@getEdit']);
+		Route::post('edit/{id}',['as' => 'admin.department.postEdit','uses' => 'DepartmentController@postEdit']);
 	});
 });

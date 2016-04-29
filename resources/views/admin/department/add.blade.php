@@ -1,4 +1,4 @@
-    @extends('admin.master')
+@extends('admin.master')
 @section('action','Add Department')
 @section('content')
     <div class="col-lg-7 panel-body" style="padding-bottom:120px">
@@ -6,20 +6,13 @@
         <input type="hidden" name="_token" value="{!! csrf_token() !!}"/>
         <div class="form-group">
             <label>Department Name</label>
-            <input class="form-control" name="txtName" placeholder="Please Enter Department Name" />
-            @if(count($errors->get('txtName')) > 0)
-            <div class="text-danger">
-                <ul>
-                    @foreach($errors->get('txtName') as $error)
-                    {!! $error !!}
-                    @endforeach
-                </ul>
-            </div>
-            @endif
+            <input class="form-control" name="txtName" placeholder="Please Enter Department Name" value="{!! old('txtName') !!}"/>
+            <?php error($errors,'txtName')?>
         </div>
         <div class="form-group">
             <label>Office Phone</label>
-            <input class="form-control" name="txtPhone" placeholder="Please Enter Office Phone" />
+            <input class="form-control" name="txtPhone" placeholder="Please Enter Office Phone" value="{!! old('txtPhone') !!}"/>
+            <?php error($errors,'txtPhone')?>
         </div>
         <div class="form-group">
             <label>Manager</label>
