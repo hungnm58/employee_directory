@@ -2,7 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="92e01276-a684-48f7-a756-1d61de983227" name="Default" comment="">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/uploads/SavedPicture04_04_2015 10_25_04 SA.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/uploads/SavedPicture04_04_2015 10_25_34 SA.jpg" />
       <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/Http/Controllers/EmployeeController.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/Http/Requests/EmployeeRequest.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Http/Controllers/DepartmentController.php" afterPath="$PROJECT_DIR$/app/Http/Controllers/DepartmentController.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/views/admin/department/add.blade.php" afterPath="$PROJECT_DIR$/resources/views/admin/department/add.blade.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/views/admin/employee/add.blade.php" afterPath="$PROJECT_DIR$/resources/views/admin/employee/add.blade.php" />
