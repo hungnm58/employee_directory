@@ -1,5 +1,6 @@
 <?php namespace App\Http\Controllers;
 
+use App\Employee;
 use App\Http\Requests;
 use App\Http\Controllers\Controller;
 
@@ -20,7 +21,7 @@ class DepartmentController extends Controller {
 //	}
 
 	public function getAdd() {
-		$data = Department::select('id','name','office_phone','em_id')->get()->toArray();
+		$data = Employee::select('id','name','depart_id')->get()->toArray();
 		return view('admin.department.add',compact('data'));
 	}
 

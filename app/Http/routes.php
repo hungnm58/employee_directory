@@ -30,4 +30,9 @@ Route::group(['prefix' => 'admin'],function(){
 		Route::get('edit/{id}',['as' => 'admin.department.getEdit','uses' => 'DepartmentController@getEdit']);
 		Route::post('edit/{id}',['as' => 'admin.department.postEdit','uses' => 'DepartmentController@postEdit']);
 	});
+
+	Route::group(['prefix' => 'employee'],function(){
+		Route::get('add',['as' => 'admin.employee.getAdd','uses' => 'EmployeeController@getAdd']);
+		Route::post('add',['as' => 'admin.employee.postAdd','uses' => 'EmployeeController@postAdd']);
+	});
 });

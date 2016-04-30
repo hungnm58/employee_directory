@@ -18,7 +18,9 @@
             <label>Manager</label>
             <select class="form-control" name="txtManager">
                 <option value="">Please Choose Manager</option>
-                <option value="">Hùng</option>
+                @foreach($data as $item)
+                    <option value="{!! $item['id'] !!}" {!! $item['id'] == old('txtManager') ? 'selected' : '' !!}>{!! $item['name'] !!}</option>
+                @endforeach
             </select>
         </div>
         <button type="submit" class="btn btn-primary">Add</button>
