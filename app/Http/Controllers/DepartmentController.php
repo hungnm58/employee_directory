@@ -29,27 +29,34 @@ class DepartmentController extends Controller {
 		$depart = new Department();
 		$depart->name = $request->txtName;
 		$depart->office_phone = $request->txtPhone;
-		$depart->em_id = 1;
+		$depart->em_id = $request->txtManager;
 		$depart->save();
 		return redirect()->route('admin.department.list')->with(['flash_message' => 'Success! Complete add department']);
 	}
 
 	public function getDelete($id) {
 		$depart = Department::find($id);
-		$depart->delete();
+		$depart->delete($id);
 		return redirect()->route('admin.department.list')->with(['flash_message' => 'Success! Complete delete department']);
 	}
 
 	public function getEdit($id) {
+		$emp = Employee::select('id','name','depart_id')->get()->toArray();
 		$data = Department::find($id)->toArray();
-		return view('admin.department.edit',compact('data','id'));
+		return view('admin.department.edit',compact('data','id','emp'));
 	}
 
-	public function postEdit(DepartmentRequest $request,$id) {
+	public function postEdit(Request $request,$id) {
+		$this->validate($request,
+			[
+				"txtName" => "required",
+				"txtPhone" => "required"
+			]
+		);
 		$depart = Department::find($id);
 		$depart->name = $request->txtName;
 		$depart->office_phone = $request->txtPhone;
-		$depart->em_id = 1;
+		$depart->em_id = $request->txtManager;
 		$depart->save();
 		return redirect()->route('admin.department.list')->with(['flash_message' => 'Success! Complete edit department']);
 	}

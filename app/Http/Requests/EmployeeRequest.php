@@ -23,7 +23,7 @@ class EmployeeRequest extends Request {
 	{
 		return [
 			'txtDepartment' =>      'required',
-			'txtName'       =>      'required|unique:employees,name',
+			'txtName'       =>      'required',
 			'fImage'        =>      'required|image',
 			'txtJobTitle'   =>      'required',
 			'txtCellPhone'  =>      'required|numeric',

@@ -32,7 +32,11 @@ Route::group(['prefix' => 'admin'],function(){
 	});
 
 	Route::group(['prefix' => 'employee'],function(){
+		Route::get('list',['as' => 'admin.employee.list','uses' => 'EmployeeController@getList']);
 		Route::get('add',['as' => 'admin.employee.getAdd','uses' => 'EmployeeController@getAdd']);
 		Route::post('add',['as' => 'admin.employee.postAdd','uses' => 'EmployeeController@postAdd']);
+		Route::get('delete/{id}',['as' => 'admin.employee.getDelete','uses' => 'EmployeeController@getDelete']);
+		Route::get('edit/{id}',['as' => 'admin.employee.getEdit','uses' => 'EmployeeController@getEdit']);
+		Route::post('edit/{id}',['as' => 'admin.employee.postEdit','uses' => 'EmployeeController@postEdit']);
 	});
 });

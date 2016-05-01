@@ -26,13 +26,4 @@ class DepartmentRequest extends Request {
 			'txtPhone'      =>      'required|numeric'
 		];
 	}
-
-	public function message() {
-		return [
-			'txtName.required'      =>      'Please enter the name',
-			'txtName.unique'        =>      'This name is exists',
-			'txtPhone.required'     =>      'Please enter the phone number',
-			'txtPhone.numeric'      =>      'Phone number is not true'
-		];
-	}
 }
