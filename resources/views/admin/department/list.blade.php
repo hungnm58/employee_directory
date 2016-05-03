@@ -1,7 +1,7 @@
 @extends('admin.master')
 @section('action','Department List')
 @section('content')
-    <table class="table table-striped table-bordered table-hover" id="dataTables-example">
+    <table class="table table-striped table-bordered table-hover display nowrap" id="data-table">
         <thead>
         <tr align="center">
             <th>STT</th>
@@ -31,9 +31,9 @@
                     ?>
                 @endif
             </td>
-            <td class="center"><i class="fa fa-users fa-fw"></i><a href="{!! URL::route('admin.department.getView',$item['id']) !!}"> View</a></td>
-            <td class="center"><i class="fa fa-trash  fa-fw"></i><a onclick="return confirmDelete('Do you want delete this department?')" href="{!! URL::route('admin.department.getDelete',$item['id']) !!}"> Delete</a></td>
-            <td class="center"><i class="fa fa-pencil fa-fw"></i> <a href="{!! URL::route('admin.department.getEdit',$item['id']) !!}">Edit</a></td>
+            <td class="center"><button type="submit" class="btn btn-info"><a href="{!! URL::route('admin.department.getView',$item['id']) !!}"> View</a></button></td>
+            <td class="center"><button type="submit" class="btn btn-danger"><a onclick="return confirmDelete('Do you want delete this department?')" href="{!! URL::route('admin.department.getDelete',$item['id']) !!}"> Delete</a></button></td>
+            <td class="center"><button type="submit" class="btn btn-warning"><a href="{!! URL::route('admin.department.getEdit',$item['id']) !!}">Edit</a></button></td>
         </tr>
         @endforeach
         </tbody>

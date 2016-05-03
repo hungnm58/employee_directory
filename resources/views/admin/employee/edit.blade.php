@@ -12,7 +12,7 @@
             <div class="form-group">
                 <label>Image current</label>
                 <img src="{!! asset('resources/uploads/'.$data['image']) !!}" height="50px" width="50px" />
-                <input type="hidden" name="img_current" value="{!! $data['image'] !!}" />
+                <input type="hidden" name="img_current" value="{!! $data['image'] !!}" class="custom-file-input"/>
             </div>
             <div class="form-group">
                 <label>Images</label>

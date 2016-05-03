@@ -42,7 +42,7 @@ class AuthController extends Controller {
 
 	public function postLogin(LoginRequest $request) {
 		$login = array(
-			'email' => $request->txtEmail,
+			'username' => $request->txtUser,
 			'password' => $request->txtPass
 		);
 		if($this->auth->attempt($login)) {

@@ -22,14 +22,14 @@ class LoginRequest extends Request {
 	public function rules()
 	{
 		return [
-			'txtEmail'      =>      'required',
+			'txtUser'      =>      'required',
 			'txtPass'       =>      'required',
 		];
 	}
 
 	public function message() {
 		return [
-			'txtEmail.required'     =>      'Please enter email',
+			'txtUser.required'     =>      'Please enter email',
 			'txtPass.required'     =>      'Please enter password',
 		];
 	}

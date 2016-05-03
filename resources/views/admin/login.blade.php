@@ -26,7 +26,7 @@
     <div class="container">
         <div class="row">
             <div class="col-md-4 col-md-offset-4">
-                <div class="login-panel panel panel-default">
+                <div class="login-panel panel panel-primary">
                     <div class="panel-heading">
                         <h3 class="panel-title">Please Sign In</h3>
                     </div>
@@ -35,14 +35,14 @@
                             <input type="hidden" name="_token" value="{!! csrf_token()  !!}"/>
                             <fieldset>
                                 <div class="form-group">
-                                    <input class="form-control" placeholder="E-mail" name="txtEmail" type="email" autofocus>
-                                    <?php error($errors,'txtEmail')?>
+                                    <input class="form-control" placeholder="Username" name="txtUser" type="text" autofocus>
+                                    <?php error($errors,'txtUser')?>
                                 </div>
                                 <div class="form-group">
                                     <input class="form-control" placeholder="Password" name="txtPass" type="password" value="">
                                     <?php error($errors,'txtPass')?>
                                 </div>
-                                <button type="submit" class="btn btn-lg btn-success btn-block">Login</button>
+                                <button type="submit" class="btn btn-lg btn-primary btn-block">Login</button>
                             </fieldset>
                         </form>
                     </div>
@@ -61,7 +61,7 @@
     <script src="{{ url('public/admin/bower_components/metisMenu/dist/metisMenu.min.js')}}"></script>
 
     <!-- Custom Theme JavaScript -->
-    <script src="{{ url('public/admin/dist/js/sb-admin-2.js')}}"></script>
+    <script src="{{ url('public/admin/dist/js/script.js')}}"></script>
 
 </body>
 

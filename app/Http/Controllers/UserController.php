@@ -43,11 +43,10 @@ class UserController extends Controller {
 		$this->validate($request,[
 			'txtPass'       =>      'required|min:8',
 			'txtRePass'     =>      'required|same:txtPass',
-			'txtEmail'      =>      'required|regex:/^[a-z][a-z0-9]*(_[a-z0-9]+)*(\.[a-z0-9]+)*@[a-z0-9]([a-z0-9-][a-z0-9]+)*(\.[a-z]{2,4}){1,2}$/'
+			//'txtEmail'      =>      'required|regex:/^[a-z][a-z0-9]*(_[a-z0-9]+)*(\.[a-z0-9]+)*@[a-z0-9]([a-z0-9-][a-z0-9]+)*(\.[a-z]{2,4}){1,2}$/'
 		]);
 		$user = User::find($id);
 		$user->password = Hash::make($request->txtPass);
-		$user->email = $request->txtEmail;
 		$user->save();
 		return redirect()->route('admin.user.list')->with(['flash_level' => 'success','flash_message' => 'Complete add user']);
 	}

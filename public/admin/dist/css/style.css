@@ -53,7 +53,7 @@ body {
 }
 
 .navbar-top-links .dropdown-menu li a {
-    padding: 3px 20px;
+    padding: 7px 20px;
     min-height: 0;
 }
 
@@ -81,7 +81,6 @@ body {
 }
 
 .navbar-top-links .dropdown-user {
-    right: 0;
     left: auto;
 }
 
@@ -352,3 +351,60 @@ table.dataTable thead .sorting:after {
 .panel-yellow a:hover {
     color: #df8a13;
 }
+
+#side-menu li a {
+    font-size: 15px;
+    color: #000 !important;
+}
+
+.title,
+.arrow{
+    font-weight: 600 !important;
+}
+
+.col-lg-12 {
+    padding-left: 0;
+}
+
+table.dataTable thead .sorting:after,
+table.dataTable thead .sorting_desc:after,
+table.dataTable thead .sorting_asc:after{
+    content: '';
+}
+
+th {
+    text-align: center;
+}
+
+.fa-home {
+    font-size: 32px !important;
+}
+
+.navbar-brand {
+    padding: 10px;
+}
+
+.dropdown a {
+    color: #fff;
+}
+
+.btn a {
+    color: #fff;
+}
+
+.btn a:hover {
+    text-decoration: none;
+}
+.custom-file-input::-webkit-file-upload-button {
+    padding: 7px;
+    box-shadow:0;
+}
+
+.dropdown-menu {
+    padding: 0;
+}
+
+.divider {
+    margin: 1px!important;
+}
+

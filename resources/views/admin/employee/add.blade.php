@@ -11,7 +11,7 @@
             </div>
             <div class="form-group">
                 <label>Images</label>
-                <input type="file" name="fImage" value="{!! old('fImage') !!}">
+                <input type="file" name="fImage" value="{!! old('fImage') !!}" class="custom-file-input">
                 <?php error($errors,'fImage')?>
             </div>
             <div class="form-group">

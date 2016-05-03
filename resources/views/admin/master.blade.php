@@ -31,7 +31,7 @@
 <div id="wrapper">
 
     <!-- Navigation -->
-    <nav class="navbar navbar-default navbar-static-top" role="navigation" style="margin-bottom: 0">
+    <nav class="navbar navbar-inverse navbar-static-top" role="navigation" style="margin-bottom: 0">
         <div class="navbar-header">
             <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
                 <span class="sr-only">Toggle navigation</span>
@@ -39,7 +39,7 @@
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
             </button>
-            <a class="navbar-brand" href="index.html">Admin Area</a>
+            <a class="navbar-brand" href="#"><i class="fa fa-home fa-fw"></i></a>
         </div>
         <!-- /.navbar-header -->
 
@@ -66,10 +66,7 @@
             <div class="sidebar-nav navbar-collapse">
                 <ul class="nav" id="side-menu">
                     <li>
-                        <a href="{!! url('admin/home') !!}"><i class="fa fa-dashboard fa-fw"></i> Dashboard</a>
-                    </li>
-                    <li>
-                        <a href="#"><i class="fa fa fa-bar-chart fa-fw"></i> Departments<span class="fa arrow"></span></a>
+                        <a href="#" class="title"><i class="fa fa fa-bar-chart fa-fw"></i> Departments<span class="fa arrow"></span></a>
                         <ul class="nav nav-second-level">
                             <li>
                                 <a href="{!! url('admin/department/list') !!}"><i class="fa fa fa-list fa-fw"></i> List Department</a>
@@ -81,7 +78,7 @@
                         <!-- /.nav-second-level -->
                     </li>
                     <li>
-                        <a href="#"><i class="fa fa-cube fa-fw"></i> Employees<span class="fa arrow"></span></a>
+                        <a href="#" class="title"><i class="fa fa-cube fa-fw"></i> Employees<span class="fa arrow"></span></a>
                         <ul class="nav nav-second-level">
                             <li>
                                 <a href="{!! url('admin/employee/list') !!}"><i class="fa fa fa-list fa-fw"></i> List Employee</a>
@@ -93,7 +90,7 @@
                         <!-- /.nav-second-level -->
                     </li>
                     <li>
-                        <a href="#"><i class="fa fa-users fa-fw"></i> User<span class="fa arrow"></span></a>
+                        <a href="#" class="title"><i class="fa fa-users fa-fw"></i> User<span class="fa arrow"></span></a>
                         <ul class="nav nav-second-level">
                             <li>
                                 <a href="{!! url('admin/user/list') !!}"><i class="fa fa fa-list fa-fw"></i> List User</a>
@@ -114,9 +111,9 @@
     <!-- Page Content -->
     <div id="page-wrapper">
         <div class="container-fluid">
-            <div class="row panel panel-primary">
-                <div class="col-lg-12 panel-heading">
-                    <h3 class="panel-primary">@yield('action')</h3>
+            <div class="row">
+                <div class="col-lg-12">
+                    <h1>@yield('action')</h1>
                 </div>
                 <div class="col-lg-12">
                     @if(Session::has('flash_message'))
@@ -147,10 +144,11 @@
 <script src="{{ url('public/admin/bower_components/metisMenu/dist/metisMenu.min.js') }}"></script>
 
 <!-- Custom Theme JavaScript -->
-<script src="{{ url('public/admin/dist/js/sb-admin-2.js') }}"></script>
+<script src="{{ url('public/admin/dist/js/script.js') }}"></script>
 
 <!-- DataTables JavaScript -->
 <script src="{{ url('public/admin/bower_components/DataTables/media/js/jquery.dataTables.min.js') }}"></script>
+<script src="{{ url('public/admin/bower_components/datatables-responsive/js/dataTables.responsive.js') }}"></script>
 <script src="{{ url('public/admin/bower_components/datatables-plugins/integration/bootstrap/3/dataTables.bootstrap.min.js') }}"></script>
 <!-- Page-Level Demo Scripts - Tables - Use for reference -->
 </body>

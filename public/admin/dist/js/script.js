@@ -39,7 +39,7 @@ $(function() {
  * Js for datatable
  */
 $(function() {
-    $('#dataTables-example').DataTable({
+    $('#data-table').DataTable({
         responsive: true
     });
 });

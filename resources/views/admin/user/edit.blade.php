@@ -20,7 +20,7 @@
         </div>
         <div class="form-group">
             <label>Email</label>
-            <input type="email" class="form-control" name="txtEmail" value="{!! old('txtEmail',isset($data) ? $data['email'] : null) !!}" placeholder="Please Enter Email" />
+            <input type="email" class="form-control" name="txtEmail" value="{!! old('txtEmail',isset($data) ? $data['email'] : null) !!}" placeholder="Please Enter Email" disabled />
             <?php error($errors,'txtEmail')?>
         </div>
         <button type="submit" class="btn btn-primary">User Edit</button>
