@@ -11,14 +11,13 @@
         </tr>
         </thead>
         <tbody>
-        <?php $stt = 0; ?>
+        <?php $stt = 1; ?>
         @foreach($data as $item )
-            <?php $stt++ ;?>
             <tr class="odd gradeX" align="center">
-                <td>{!! $stt !!}</td>
-                <td>{!! $data['name'] !!}</td>
-                <td>{!! $data['job_title'] !!}</td>
-                <td>{!! $data['image'] !!}</td>
+                <td>{!! $stt ++!!}</td>
+                <td>{!! $item['name'] !!}</td>
+                <td>{!! $item['job_title'] !!}</td>
+                <td>{!! $item['email'] !!}</td>
             </tr>
         @endforeach
         </tbody>

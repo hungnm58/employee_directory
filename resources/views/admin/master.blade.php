@@ -50,10 +50,10 @@
                     <i class="fa fa-user fa-fw"></i>  <i class="fa fa-caret-down"></i>
                 </a>
                 <ul class="dropdown-menu dropdown-user">
-                    <li><a href="#"><i class="fa fa-user fa-fw"></i> User Profile</a>
+                    <li><a href="#"><i class="fa fa-user fa-fw"></i>{!! Auth::user()->username !!}</a>
                     </li>
                     <li class="divider"></li>
-                    <li><a href="login.html"><i class="fa fa-sign-out fa-fw"></i> Logout</a>
+                    <li><a href="{!! url('auth/logout') !!}"><i class="fa fa-sign-out fa-fw"></i> Logout</a>
                     </li>
                 </ul>
                 <!-- /.dropdown-user -->
@@ -66,16 +66,16 @@
             <div class="sidebar-nav navbar-collapse">
                 <ul class="nav" id="side-menu">
                     <li>
-                        <a href="#"><i class="fa fa-dashboard fa-fw"></i> Dashboard</a>
+                        <a href="{!! url('admin/home') !!}"><i class="fa fa-dashboard fa-fw"></i> Dashboard</a>
                     </li>
                     <li>
                         <a href="#"><i class="fa fa fa-bar-chart fa-fw"></i> Departments<span class="fa arrow"></span></a>
                         <ul class="nav nav-second-level">
                             <li>
-                                <a href="#"><i class="fa fa fa-list fa-fw"></i> List Department</a>
+                                <a href="{!! url('admin/department/list') !!}"><i class="fa fa fa-list fa-fw"></i> List Department</a>
                             </li>
                             <li>
-                                <a href="#"><i class="fa fa fa-plus fa-fw"></i> Add Department</a>
+                                <a href="{!! url('admin/department/add') !!}"><i class="fa fa fa-plus fa-fw"></i> Add Department</a>
                             </li>
                         </ul>
                         <!-- /.nav-second-level -->
@@ -84,10 +84,10 @@
                         <a href="#"><i class="fa fa-cube fa-fw"></i> Employees<span class="fa arrow"></span></a>
                         <ul class="nav nav-second-level">
                             <li>
-                                <a href="#"><i class="fa fa fa-list fa-fw"></i> List Employee</a>
+                                <a href="{!! url('admin/employee/list') !!}"><i class="fa fa fa-list fa-fw"></i> List Employee</a>
                             </li>
                             <li>
-                                <a href="#"><i class="fa fa fa-plus fa-fw"></i> Add Employee</a>
+                                <a href="{!! url('admin/employee/add') !!}"><i class="fa fa fa-plus fa-fw"></i> Add Employee</a>
                             </li>
                         </ul>
                         <!-- /.nav-second-level -->
@@ -96,10 +96,10 @@
                         <a href="#"><i class="fa fa-users fa-fw"></i> User<span class="fa arrow"></span></a>
                         <ul class="nav nav-second-level">
                             <li>
-                                <a href="#"><i class="fa fa fa-list fa-fw"></i> List User</a>
+                                <a href="{!! url('admin/user/list') !!}"><i class="fa fa fa-list fa-fw"></i> List User</a>
                             </li>
                             <li>
-                                <a href="#"><i class="fa fa fa-plus fa-fw"></i> Add User</a>
+                                <a href="{!! url('admin/user/add') !!}"><i class="fa fa fa-plus fa-fw"></i> Add User</a>
                             </li>
                         </ul>
                         <!-- /.nav-second-level -->

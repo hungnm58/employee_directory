@@ -31,7 +31,7 @@
                     ?>
                 @endif
             </td>
-            <td class="center"><i class="fa fa-users fa-fw"></i><a href=""> View</a></td>
+            <td class="center"><i class="fa fa-users fa-fw"></i><a href="{!! URL::route('admin.department.getView',$item['id']) !!}"> View</a></td>
             <td class="center"><i class="fa fa-trash  fa-fw"></i><a onclick="return confirmDelete('Do you want delete this department?')" href="{!! URL::route('admin.department.getDelete',$item['id']) !!}"> Delete</a></td>
             <td class="center"><i class="fa fa-pencil fa-fw"></i> <a href="{!! URL::route('admin.department.getEdit',$item['id']) !!}">Edit</a></td>
         </tr>

@@ -15,11 +15,6 @@ class DepartmentController extends Controller {
 		return view('admin.department.list',compact('data'));
 	}
 
-//	public function getView($id) {
-//		$data = Employee::select('name','job_title','image')->where('depart_id','=',$id)->orderBy('name','ASC')->get()->toArray();
-//		return view('admin.department.view',compact('data'));
-//	}
-
 	public function getAdd() {
 		$data = Employee::select('id','name','depart_id')->get()->toArray();
 		return view('admin.department.add',compact('data'));
@@ -59,5 +54,10 @@ class DepartmentController extends Controller {
 		$depart->em_id = $request->txtManager;
 		$depart->save();
 		return redirect()->route('admin.department.list')->with(['flash_message' => 'Success! Complete edit department']);
+	}
+
+	public function getView($id) {
+		$data = Employee::select('id','name','job_title','email')->where('depart_id','=',$id)->get()->toArray();
+		return view('admin.department.view',compact('data'));
 	}
 }
