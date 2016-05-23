@@ -1,7 +1,7 @@
 @extends('admin.master')
 @section('action','Employees List')
 @section('content')
-    <table class="table table-striped table-bordered table-hover" id="data-table">
+    <table class="table table-striped table-bordered table-hover dt-responsive" id="dataTable" cellspacing="0" width="100%">
         <thead>
         <tr align="center">
             <th>STT</th>
@@ -26,10 +26,12 @@
             <td>{!! $item['cell_phone'] !!}</td>
             <td>{!! $item['email'] !!}</td>
             <td>
-                <?php
-                    $depart = DB::table('departments')->where('id',$item['depart_id'])->first();
-                    echo $depart->name;
-                ?>
+                <?php $depart = DB::table('departments')->where('id',$item['depart_id'])->first();?>
+                @if($depart == null)
+                    {!! 'Empty' !!}
+                @else
+                    {!! $depart->name  !!}
+                @endif
             </td>
             <td class="center"><button type="submit" class="btn btn-danger"><a onclick="return confirmDelete('Do you want delete this employee?')" href="{!! URL::route('admin.employee.getDelete',$item['id']) !!}"> Delete</a></button></td>
             <td class="center"><button type="submit" class="btn btn-warning"><a href="{!! URL::route('admin.employee.getEdit',$item['id']) !!}">Edit</a></button></td>

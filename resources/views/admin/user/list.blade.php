@@ -1,7 +1,7 @@
 @extends('admin.master')
 @section('action','User List')
 @section('content')
-    <table class="table table-striped table-bordered table-hover" id="data-table">
+    <table class="table table-striped table-bordered table-hover" id="dataTable">
         <thead>
         <tr align="center">
             <th>STT</th>

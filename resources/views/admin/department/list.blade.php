@@ -1,7 +1,7 @@
 @extends('admin.master')
 @section('action','Department List')
 @section('content')
-    <table class="table table-striped table-bordered table-hover display nowrap" id="data-table">
+    <table class="table table-striped table-bordered" id="dataTable">
         <thead>
         <tr align="center">
             <th>STT</th>
@@ -22,13 +22,11 @@
             <td>{!! $item['name'] !!}</td>
             <td>{!! $item['office_phone'] !!}</td>
             <td>
-                @if($item['em_id'] == 0)
+                <?php $depart = DB::table('employees')->where('id',$item['em_id'])->first();?>
+                @if($depart == null)
                     {!! 'Empty' !!}
                 @else
-                    <?php
-                        $depart = DB::table('employees')->where('id',$item['em_id'])->first();
-                        echo $depart->name;
-                    ?>
+                       {!! $depart->name  !!}
                 @endif
             </td>
             <td class="center"><button type="submit" class="btn btn-info"><a href="{!! URL::route('admin.department.getView',$item['id']) !!}"> View</a></button></td>

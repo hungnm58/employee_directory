@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="Quan li nhan vien">
-    <title>Trang web qu?n lí nhân viên</title>
+    <title>Employee Directory</title>
 
     <!-- Bootstrap Core CSS -->
     <link href="{{ url('public/admin/bower_components/bootstrap/dist/css/bootstrap.min.css')}}" rel="stylesheet">

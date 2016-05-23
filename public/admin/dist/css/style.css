@@ -408,3 +408,7 @@ th {
     margin: 1px!important;
 }
 
+table.dataTable th,
+table.dataTable td {
+    white-space: nowrap;
+}

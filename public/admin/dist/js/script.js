@@ -1,7 +1,8 @@
+/**
+ * JS for menu
+ */
 $(function() {
-
     $('#side-menu').metisMenu();
-
 });
 
 //Loads the correct sidebar on window load,
@@ -36,14 +37,13 @@ $(function() {
 });
 
 /**
- * Js for datatable
+ * Js for dataTable
  */
 $(function() {
-    $('#data-table').DataTable({
+    $('#dataTable').DataTable({
         responsive: true
     });
 });
-
 /**
  * Slide up alert
  */
@@ -60,4 +60,3 @@ function confirmDelete(msg) {
     }
     return false;
 }
-
